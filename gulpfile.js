@@ -16,7 +16,15 @@ gulp.task('serve', function () {
     var server = gls.static('public', 3000);
     server.start();
 
-    gulp.watch(['public/**/*.js', 'public/**/*.html'], function (file) {
+    gulp.watch([
+        'public/**/*.js',
+        'public/**/*.html',
+        'public/**/*.css',
+        'public/**/*.jpe?g',
+        'public/**/*.png',
+        'public/**/*.gif',
+        'public/**/*.svg'
+    ], function (file) {
         server.notify.apply(server, [file]);
     });
 });
