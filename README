@@ -1,0 +1,10 @@
+
+
+This is an atempt to rise a development environment for jspm.
+It is also an ES6 learning project
+It should include:
+	jspm install
+	gulp install to run tasks
+	karma to run tests
+	mocha, chai, sinon to be the test frameworks stack
+	istanbul as the coverage tool.
