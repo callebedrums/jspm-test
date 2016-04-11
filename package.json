@@ -4,9 +4,11 @@
       "baseURL": "public"
     },
     "dependencies": {
+      "angular": "github:angular/bower-angular@^1.5.3",
       "jquery": "npm:jquery@^2.2.3"
     },
     "devDependencies": {
+      "angular-mocks": "github:angular/bower-angular-mocks@^1.5.3",
       "babel": "npm:babel-core@^5.8.24",
       "babel-runtime": "npm:babel-runtime@^5.8.24",
       "core-js": "npm:core-js@^1.1.4"

@@ -3,6 +3,14 @@ var gulp = require('gulp');
 var gls = require('gulp-live-server');
 var jspm = require('gulp-jspm');
 var sourcemaps = require('gulp-sourcemaps');
+var karmaServer = require('karma').Server;
+
+gulp.task('test', function (done) {
+    new karmaServer({
+        configFile: __dirname + '/karma.conf.js',
+        singleRun: true
+    }, done).start();
+});
 
 gulp.task('jspm-map', function () {
     gulp.src('public/main.js')
