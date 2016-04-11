@@ -43,6 +43,7 @@
     "gulp-jspm": "^0.5.8",
     "gulp-live-server": "0.0.29",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-webserver": "^0.9.1",
     "isparta": "^4.0.0",
     "istanbul": "gotwarlost/istanbul.git#source-map",
     "jspm": "^0.16.32",
