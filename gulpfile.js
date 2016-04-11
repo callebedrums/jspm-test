@@ -3,7 +3,7 @@ var gulp = require('gulp');
 var jspm = require('gulp-jspm');
 var sourcemaps = require('gulp-sourcemaps');
 var karmaServer = require('karma').Server;
-var webserver = require('gulp-webserver');
+var server = require('gulp-server-livereload');
 
 gulp.task('test', function (done) {
     new karmaServer({
@@ -20,11 +20,17 @@ gulp.task('jspm-map', function () {
         .pipe(gulp.dest('public/'))
 });
 
-gulp.task('webserver', function () {
+gulp.task('serve', function () {
     gulp.src('public')
-        .pipe(webserver({
-            livereload: true,
+        .pipe(server({
+            livereload: {
+                enabled: true,
+                filter: function (filePath, cb) {
+                    cb(!(/jspm_packages/.test(filePath)));
+                }
+            },
             open: true,
+            defaultFile: 'index.html',
             fallback: 'index.html'
         }));
 });
