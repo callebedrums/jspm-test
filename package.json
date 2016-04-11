@@ -41,7 +41,6 @@
     "chai": "^3.5.0",
     "gulp": "^3.9.1",
     "gulp-jspm": "^0.5.8",
-    "gulp-live-server": "0.0.29",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-webserver": "^0.9.1",
     "isparta": "^4.0.0",
